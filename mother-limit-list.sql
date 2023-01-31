@@ -1,8 +1,9 @@
-
+-- limit part
 select * from mother_limit;
 select * from mother_limit_history;
 select * from relationship_manager;
 select * from company;
+
 
 
 select 
@@ -18,7 +19,71 @@ select
 	c.id as supplier_id
 	
 from mother_limit_history mlh
-join mother_limit ml on ml.id =mlh.id
-join achor_limit al on al.mother_limit_id=ml.id
-join relationship_manager rm on rm.id =ml.id
-join company c on c.id =ml.id
+left join mother_limit ml on ml.id =mlh.id
+left join achor_limit al on al.mother_limit_id=ml.id
+left join relationship_manager rm on rm.id =ml.id
+left join company c on c.id =ml.id
+
+
+--branch-list.js
+select * from fi_branch;
+
+select 
+	fb.id,
+	fb.name,
+	fb.code,
+	fb.address
+	
+from fi_branch fb ;
+
+
+--rm-list.js
+select * from relationship_manager;
+
+select 
+	rm.id,
+	rm.name,
+	rm.code
+from relationship_manager rm ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
