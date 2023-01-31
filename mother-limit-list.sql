@@ -46,6 +46,22 @@ select
 	rm.code
 from relationship_manager rm ;
 
+--supplier-id-list
+
+select * from company;
+select * from address;
+
+
+select 
+	c.name,
+	c.code as supplier_id,
+	
+	a.address_details
+
+
+from company c 
+left join address a on a.company_id  =c.id;
+
 
 
 
