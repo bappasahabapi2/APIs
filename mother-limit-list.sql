@@ -62,7 +62,20 @@ select
 from company c 
 left join address a on a.company_id  =c.id;
 
+--default-limit-information
 
+select * from global_param gp ;
+
+select 
+	gp.default_credit_limit as total_credit_limit,
+	gp.end_date as expiry_date,
+	gp.default_interest_rate as interest_rate,
+	gp.default_penalty_rate as penalty_rate,
+	gp.default_service_charge as invoice_processing_cost,
+	gp.default_safety_deposit_rate as deposit_rate,
+	gp.default_financing_percentage as financing_rate
+
+from global_param gp 
 
 
 
