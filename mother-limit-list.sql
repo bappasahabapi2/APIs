@@ -1,4 +1,24 @@
--- limit part
+-- limit part set/post
+--insert-data
+
+INSERT INTO public.mother_limit_history(
+id, mother_limit_id, default_credit_limit, default_financing_percentage, default_credit_period, default_grace_period, default_interest_rate, default_penalty_rate, default_service_charge, default_safety_deposit_rate, default_disbursement_date, is_active, start_date, end_date, created_on, created_by)
+VALUES (2, 1, 10, 1, 1, 1, 1, 1, 1, 1, '2013-03-24 00:00:00', 'false', '2013-03-24 00:00:00', '2013-03-24 00:00:00', '2013-03-24 00:00:00', 'system');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- limit part get
 select * from mother_limit;
 select * from mother_limit_history;
 select * from relationship_manager;
